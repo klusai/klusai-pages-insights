@@ -1,0 +1,64 @@
+title: KlusAI Insights
+tagline: Field notes from building kOS
+description: >-
+  What we learned building kOS, its verticals and the models behind them.
+  Written from the code, the incidents and the measurements, not from the
+  outside looking in.
+url: "https://insights.klusai.com"
+author:
+  name: KlusAI
+  email: hello@klusai.com
+lang: en
+twitter:
+  card: summary_large_image
+
+# og:image for every page — jekyll-seo-tag reads page.image (not site.image),
+# so inject the default share card across all pages via Jekyll defaults.
+defaults:
+  - scope: { path: "" }
+    values:
+      image: /assets/og-insights.png
+
+show_excerpts: true
+
+# Build posts dated "today" even when GitHub Pages builds in UTC and the local
+# publish date is already a day ahead (otherwise a post dated at local publish
+# time is treated as future-dated and silently excluded from the UTC build).
+future: true
+
+# --- shared brand (single source of truth: klusai/klusai-pages-brand) ---
+remote_theme: klusai/klusai-pages-brand
+
+# Research teal and academy indigo are taken by the other two properties, so
+# this site carries the house blue. The theme remaps --accent from the named
+# ramp; it is not a cosmetic choice.
+accent: klusai
+brand_sub: Insights
+feed_in_footer: true
+
+nav:
+  - { title: Blog, url: /blog/ }
+  - { title: About, url: /about/ }
+nav_cta_text: klusai.com
+nav_cta_url: https://klusai.com
+org_legal_name: KlusAI Labs SRL
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Reused links: the klusai.com contact form is intent-aware, so a post's CTA
+# deep-links with ?intent=scoping-session and the funnel is measurable end to
+# end rather than stopping at "someone read a post".
+klusai:
+  company: "https://klusai.com"
+  contact: "https://klusai.com/contact/?intent=scoping-session"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - AGENTS.md
+  - vendor/
