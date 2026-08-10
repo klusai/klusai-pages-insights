@@ -36,6 +36,12 @@ accent: klusai
 brand_sub: Insights
 feed_in_footer: true
 
+# This site's own Plausible site id. Public by design (it ships in the <script
+# src> of every page). Must be insights.klusai.com's id and nothing else — the
+# theme renders no tracker at all when unset, rather than falling back to
+# another site's id and filing this traffic under it.
+plausible_script_id: pa-xMc4JqQdbgiWc6sENQOxP
+
 nav:
   - { title: Blog, url: /blog/ }
   - { title: About, url: /about/ }
