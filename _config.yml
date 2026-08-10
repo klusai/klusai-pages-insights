@@ -12,6 +12,10 @@ lang: en
 twitter:
   card: summary_large_image
 
+# Plausible id for insights.klusai.com and no other host. Public by design (it
+# ships in the page source); the theme emits nothing if this is unset.
+plausible_script_id: pa-xMc4JqQdbgiWc6sENQOxP
+
 # og:image for every page — jekyll-seo-tag reads page.image (not site.image),
 # so inject the default share card across all pages via Jekyll defaults.
 defaults:
